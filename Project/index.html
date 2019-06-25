@@ -1,0 +1,358 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+<nav class="nav-general">
+  <ul class="nav-ul">
+    <li>
+      <a class="nav-link" href="https://www.sports.ru/">Главная</a>
+    </li>
+    <li>
+      <a class="nav-link" href="https://www.sports.ru/">Списки</a>
+    </li>
+    <li>
+      <a class="nav-link" href="https://www.sports.ru/">Загрузка начальных данных</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="container">
+
+  <div class="buttons-container">
+
+    <div class="buttons__left">
+      <button class="btn btn-primary">Генерировать</button>
+      <button class="btn btn-success">Сохранить изменения</button>
+    </div>
+
+    <div class="buttons__right">
+      <b>Загрузка рассадки: </b>
+      <button class="btn btn-primary">1 Экзамен</button>
+      <button class="btn btn-primary">2 Экзамен</button>
+    </div>
+
+  </div>
+
+  <div class="content">
+
+    <p>Дата последнего сохранения: 1 Jun 2019 22:18:50 </p>
+
+    <div class="searching-container">
+
+      <div class="searching-column">
+        <p>Поиск</p>
+        <input type="text" class="form-control">
+      </div>
+
+      <div class="searching-column">
+        <p>Корпус</p>
+        <select class="form-control" id="buildingOptions">
+          <option value="empty" selected="selected"></option>
+          <!--          <option>Главный корпус БГУ</option>-->
+          <!--          <option>Физический факультет БГУ</option>-->
+          <!--          <option>Географический факультет БГУ</option>-->
+          <!--          <option>Химический факультет БГУ</option>-->
+          <!--          <option>Юридический факультет БГУ</option>-->
+          <!--          <option>Факультет международных отношений БГУ</option>-->
+        </select>
+      </div>
+
+      <div class="searching-column">
+        <p>Профиль</p>
+        <select class="form-control" id="profileOptions">
+          <option value="all" selected="selected">Все</option>
+        </select>
+      </div>
+
+      <div class="searching-column">
+        <p>Аудитория</p>
+        <select class="form-control" id="auditoryOptions">
+          <option value="all" selected="selected">Все</option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class="tables-container">
+
+      <div class="left-table">
+        <table class="table" id="studentsTable">
+
+          <thead>
+          <tr>
+            <th>#</th>
+            <th data-property="name" class="sortable">ФИО<span></span></th>
+            <th data-property="auditory" class="sortable">Каб.<span></span></th>
+            <th data-property="profile" class="sortable">Профиль<span></span></th>
+            <th>Бел</th>
+          </tr>
+          </thead>
+
+<!--          <tbody>-->
+<!--          <tr class="draggable">-->
+<!--            <td>1</td>-->
+<!--            <td>Новицкая Юлия Вячеславовна</td>-->
+<!--            <td>312</td>-->
+<!--            <td>филологический (РУС)</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr class="draggable">-->
+<!--            <td>2</td>-->
+<!--            <td>Ждонец Мария Андреевна</td>-->
+<!--            <td>312</td>-->
+<!--            <td>филологический (РУС)</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr class="draggable">-->
+<!--            <td>3</td>-->
+<!--            <td>Новгородцева Виктория Сергеевна</td>-->
+<!--            <td>312</td>-->
+<!--            <td>филологический (РУС)</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>1</td>-->
+<!--            <td>Новицкая Юлия Вячеславовна</td>-->
+<!--            <td>312</td>-->
+<!--            <td>филологический (РУС)</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>2</td>-->
+<!--            <td>Ждонец Мария Андреевна</td>-->
+<!--            <td>312</td>-->
+<!--            <td>филологический (РУС)</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>3</td>-->
+<!--            <td>Новгородцева Виктория Сергеевна</td>-->
+<!--            <td>312</td>-->
+<!--            <td>филологический (РУС)</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>1</td>-->
+<!--            <td>Новицкая Юлия Вячеславовна</td>-->
+<!--            <td>312</td>-->
+<!--            <td>филологический (РУС)</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>2</td>-->
+<!--            <td>Ждонец Мария Андреевна</td>-->
+<!--            <td>312</td>-->
+<!--            <td>филологический (РУС)</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>3</td>-->
+<!--            <td>Новгородцева Виктория Сергеевна</td>-->
+<!--            <td>312</td>-->
+<!--            <td>филологический (РУС)</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>1</td>-->
+<!--            <td>Новицкая Юлия Вячеславовна</td>-->
+<!--            <td>312</td>-->
+<!--            <td>филологический (РУС)</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>2</td>-->
+<!--            <td>Ждонец Мария Андреевна</td>-->
+<!--            <td>312</td>-->
+<!--            <td>филологический (РУС)</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>3</td>-->
+<!--            <td>Новгородцева Виктория Сергеевна</td>-->
+<!--            <td>312</td>-->
+<!--            <td>филологический (РУС)</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>1</td>-->
+<!--            <td>Новицкая Юлия Вячеславовна</td>-->
+<!--            <td>312</td>-->
+<!--            <td>филологический (РУС)</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>2</td>-->
+<!--            <td>Ждонец Мария Андреевна</td>-->
+<!--            <td>312</td>-->
+<!--            <td>филологический (РУС)</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>3</td>-->
+<!--            <td>Новгородцева Виктория Сергеевна</td>-->
+<!--            <td>312</td>-->
+<!--            <td>филологический (РУС)</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>1</td>-->
+<!--            <td>Новицкая Юлия Вячеславовна</td>-->
+<!--            <td>312</td>-->
+<!--            <td>филологический (РУС)</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>2</td>-->
+<!--            <td>Ждонец Мария Андреевна</td>-->
+<!--            <td>312</td>-->
+<!--            <td>филологический (РУС)</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>3</td>-->
+<!--            <td>Новгородцева Виктория Сергеевна</td>-->
+<!--            <td>312</td>-->
+<!--            <td>филологический (РУС)</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>1</td>-->
+<!--            <td>Новицкая Юлия Вячеславовна</td>-->
+<!--            <td>312</td>-->
+<!--            <td>филологический (РУС)</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>2</td>-->
+<!--            <td>Ждонец Мария Андреевна</td>-->
+<!--            <td>312</td>-->
+<!--            <td>филологический (РУС)</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>3</td>-->
+<!--            <td>Новгородцева Виктория Сергеевна</td>-->
+<!--            <td>312</td>-->
+<!--            <td>филологический (РУС)</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>1</td>-->
+<!--            <td>Новицкая Юлия Вячеславовна</td>-->
+<!--            <td>312</td>-->
+<!--            <td>филологический (РУС)</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>2</td>-->
+<!--            <td>Ждонец Мария Андреевна</td>-->
+<!--            <td>312</td>-->
+<!--            <td>филологический (РУС)</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>3</td>-->
+<!--            <td>Новгородцева Виктория Сергеевна</td>-->
+<!--            <td>312</td>-->
+<!--            <td>филологический (РУС)</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>1</td>-->
+<!--            <td>Новицкая Юлия Вячеславовна</td>-->
+<!--            <td>312</td>-->
+<!--            <td>филологический (РУС)</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>2</td>-->
+<!--            <td>Ждонец Мария Андреевна</td>-->
+<!--            <td>312</td>-->
+<!--            <td>филологический (РУС)</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>3</td>-->
+<!--            <td>Новгородцева Виктория Сергеевна</td>-->
+<!--            <td>312</td>-->
+<!--            <td>филологический (РУС)</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          </tbody>-->
+        </table>
+      </div>
+
+      <div class="right-table">
+        <table class="table sticky-table" id="audiencesTable">
+
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>Количество</th>
+            <th>Max</th>
+            <th>Бел</th>
+          </tr>
+          </thead>
+
+<!--          <tbody>-->
+<!--          <tr class="droppable">-->
+<!--            <th>115</th>-->
+<!--            <td>20</td>-->
+<!--            <td>20</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr class="droppable">-->
+<!--            <th>312</th>-->
+<!--            <td>59</td>-->
+<!--            <td>60</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <th>116</th>-->
+<!--            <td>30</td>-->
+<!--            <td>30</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <th>212</th>-->
+<!--            <td>54</td>-->
+<!--            <td>54</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <th>311</th>-->
+<!--            <td>53</td>-->
+<!--            <td>54</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          </tbody>-->
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/main/main.js"></script>
+<script src="js/main/sorting.js"></script>
+<script src="js/drag-and-drop.js"></script>
+
+</body>
+
+</html>
